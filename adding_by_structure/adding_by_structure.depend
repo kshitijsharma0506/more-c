@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1545064114 source:c:\users\kshitij\desktop\l2\adding_by_structure\main.c
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
