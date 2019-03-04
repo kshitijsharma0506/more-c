@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1551721792 source:c:\users\kshitij\desktop\l27\lasrge numebrs\main.cpp
+	<math.h>
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<assert.h>
+	<limits.h>
+	<stdbool.h>
+
