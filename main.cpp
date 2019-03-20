@@ -1,28 +1,41 @@
-#include <math.h>
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <assert.h>
-#include <limits.h>
-#include <stdbool.h>
+#include<iostream>
+using namespace std;
 
 int main()
 {
-    long long int p,N,T,i;
-    scanf("%lld", &T);
-for(i = 0; i < T; i++)
-    { long long int sum = 0;
-    scanf("%lld\n", &N);
-
-    p = (N-1)/3;
-    sum = ((3*p*(p+1))/2);
-
-    p = (N-1)/5;
-    sum = sum + ((5*p*(p+1))/2);
-
-    p = (N-1)/15;
-    sum = sum - ((15*p*(p+1))/2);
-    printf("%lld\n", sum);
+    int n,i,reg[100],a[100],index[100];
+    char add[100][100];
+    cin>>n;
+    for(i=0;i<n;i++)
+    {
+    cin>>reg[i];
+    cin>>add[i];
+    cin>>a[i];
     }
-    return 0;
+    for(i=0;i<n;i++)
+    {
+        index[i]=a[i];
+    }
+    int min=0;
+    for(i=0;i<n;i++)
+    {
+        for(int j=i;j<n;j++)
+        {
+            if(a[i]>a[j])
+            {
+                min=a[i];
+                a[i]=a[j];
+                a[j]=min;
+            }
+        }
+    }int temp=0;
+    for(i=0;i<n;i++)
+    {
+        if(index[i]==a[0])
+            {
+                temp=i;
+                break;
+            }
+    }
+    cout<<reg[temp]<<"\n"<<add[temp];
 }
